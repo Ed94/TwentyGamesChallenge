@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bc8turosqwlwk"]
+
+[ext_resource type="StyleBox" uid="uid://cl56a4p6kw4pg" path="res://styles/sbf_transparent.tres" id="1_5wyem"]
+[ext_resource type="FontFile" uid="uid://dl3er3q7ejmr7" path="res://assets/fonts/font_pong.ttf" id="2_0vxa6"]
+
+[resource]
+Button/font_sizes/font_size = 96
+Button/fonts/font = ExtResource("2_0vxa6")
+Button/styles/disabled = ExtResource("1_5wyem")
+Button/styles/focus = ExtResource("1_5wyem")
+Button/styles/hover = ExtResource("1_5wyem")
+Button/styles/normal = ExtResource("1_5wyem")
+Button/styles/pressed = ExtResource("1_5wyem")
+Label/font_sizes/font_size = 180
+Label/fonts/font = ExtResource("2_0vxa6")

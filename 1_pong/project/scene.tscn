@@ -1,0 +1,148 @@
+[gd_scene load_steps=3 format=3 uid="uid://be3v0iv6xjpg1"]
+
+[ext_resource type="Script" path="res://src/scene.gd" id="1_jbs0a"]
+[ext_resource type="Theme" uid="uid://bc8turosqwlwk" path="res://themes/theme_pong.tres" id="2_tqa7k"]
+
+[node name="Scene" type="Node"]
+script = ExtResource("1_jbs0a")
+paddle_x_offset = 50.0
+paddle_size = Vector2(15, 100)
+
+[node name="UI" type="Control" parent="."]
+unique_name_in_owner = true
+layout_direction = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_tqa7k")
+
+[node name="Main Menu" type="Control" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="UI/Main Menu"]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.25
+anchor_right = 0.5
+anchor_bottom = 0.25
+grow_horizontal = 2
+size_flags_vertical = 3
+theme = ExtResource("2_tqa7k")
+text = "PONG
+"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="START" type="Button" parent="UI/Main Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.7
+anchor_right = 0.5
+anchor_bottom = 0.7
+offset_left = -150.0
+offset_top = -49.0
+offset_right = 150.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "START"
+
+[node name="QUIT" type="Button" parent="UI/Main Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.8
+anchor_right = 0.5
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 2
+text = "QUIT"
+
+[node name="Pause Menu" type="Control" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="UI/Pause Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.25
+anchor_right = 0.5
+anchor_bottom = 0.25
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 142
+text = "PAUSE"
+
+[node name="Reset" type="Label" parent="UI/Pause Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.7
+anchor_right = 0.5
+anchor_bottom = 0.7
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 96
+text = "RESET"
+
+[node name="End Match" type="Label" parent="UI/Pause Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.8
+anchor_right = 0.5
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 96
+text = "END MATCH"
+
+[node name="P1" type="Label" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -94.0
+offset_right = 114.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 91
+text = "P1"
+
+[node name="P2" type="Label" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -114.0
+offset_top = -94.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 91
+text = "P2
+"
+
+[node name="Cam" type="Camera2D" parent="."]
+
+[node name="playfield" type="Node2D" parent="."]

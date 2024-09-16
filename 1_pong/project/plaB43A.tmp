@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://be3v0iv6xjpg1"]
+
+[ext_resource type="Script" path="res://src/playfield.gd" id="1_jikmi"]
+
+[node name="playfield" type="Node2D"]
+script = ExtResource("1_jikmi")
+paddle_size = Vector2(100, 100)
